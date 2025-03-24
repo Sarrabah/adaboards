@@ -1,0 +1,16 @@
+import React from "react";
+export const Header:React.FC= () => {
+    return(
+        <header className= "flex justify-between">
+            <div className="order-1 flex justify-between pt-6 pl-6 ">
+                <svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 4.42857C0 1.98594 1.96191 0 4.375 0H30.625C33.0381 0 35 1.98594 35 4.42857V26.5714C35 29.0141 33.0381 31 30.625 31H4.375C1.96191 31 0 29.0141 0 26.5714V4.42857ZM4.375 8.85714V26.5714H15.3125V8.85714H4.375ZM30.625 8.85714H19.6875V26.5714H30.625V8.85714Z" fill="white"/>
+                </svg>
+                <p className="font-title font-bold text-light text-[26px] ml-2 ">AdaBoards</p>
+            </div>
+            <div className="order-2 pt-6 pr-6 " >
+                <button className="font-title text-[22px] bg-light font-bold py-2 px-4 rounded-sm ">Log out</button>
+            </div>
+        </header>
+    );
+}

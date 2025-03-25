@@ -1,6 +1,8 @@
 import React from "react";
 import { Logo } from "../icons/Logo";
+import { useLocation } from "react-router-dom";
 export const Header:React.FC= () => {
+    const location = useLocation();
     return(
         <header className= "flex justify-between">
             <div className="order-1 flex justify-between pt-6 pl-6 text-light">
@@ -8,7 +10,7 @@ export const Header:React.FC= () => {
                 <p className="font-title font-bold text-[26px] ml-2 ">AdaBoards</p>
             </div>
             <div className="order-2 pt-6 pr-6 " >
-                <button className="font-title text-[22px] bg-light font-bold py-2 px-4 rounded-sm ">Log out</button>
+                {location.pathname ==="/landing" ?  <button className="font-title text-[22px] bg-primary font-bold py-2 px-4 rounded-sm ">Log in</button> : <button className="font-title text-[22px] bg-light font-bold py-2 px-4 rounded-sm ">Log out</button>}  
             </div>
         </header>
     );

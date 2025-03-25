@@ -7,6 +7,14 @@
   --font-title: "Gabarito";
   --font-fancy: "Gloria Hallelujah";
 }
-*{
+* {
   box-sizing: border-box;
+}
+
+body  {
+  height: 100vh;
+}
+
+#root {
+  display: contents;
 }

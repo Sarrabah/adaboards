@@ -19,7 +19,7 @@ export const BoardsPage : React.FC=() => {
     }, [])
     
     return(
-        <div>
+        <div className="flex flex-col flex-grow">
             <div className= "flex justify-between pt-6 pr-6">
                 <h1 className="order-1 font-fancy text-[40px] text-light"> Hello, <text className="text-primary">Ada Lovelace</text> !</h1>
                 <button className="order-2 font-title text-[22px] bg-primary font-bold py-2 px-4 rounded-sm">Add board</button>

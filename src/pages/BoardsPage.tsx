@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BoardInterface } from "../types/Board";
 
 export const BoardsPage : React.FC=() => {
-    const [boards, SetBoards] = useState<BoardInterface[]>([]);
+    const [boards, setBoards] = useState<BoardInterface[]>([]);
 
     const allBoards = async () => {
         const data = await fetch ("https://adaboards-api.vercel.app/api/boards",{
@@ -15,7 +15,7 @@ export const BoardsPage : React.FC=() => {
         return jsonData;
     }
     useEffect(()=> {
-        allBoards().then((bd) => SetBoards(bd));
+        allBoards().then((bd) => setBoards(bd));
     }, [])
     
     return(
